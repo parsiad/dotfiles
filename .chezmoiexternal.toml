@@ -1,0 +1,39 @@
+[".alacritty.theme.toml"]
+type = "file"
+url = "https://raw.githubusercontent.com/dracula/alacritty/c8a3a13404b78d520d04354e133b5075d9b785e1/dracula.toml"
+
+[".config/dunst/dunstrc"]
+type = "file"
+url = "https://raw.githubusercontent.com/dracula/dunst/907f345d81dba9566eff59dd89afb321118da180/dunstrc"
+
+[".config/nvim/init.lua"]
+type = "file"
+url = "https://raw.githubusercontent.com/LazyVim/starter/803bc181d7c0d6d5eeba9274d9be49b287294d99/init.lua"
+
+[".config/ranger/plugins/ranger_devicons/devicons.py"]
+type = "file"
+url = "https://raw.githubusercontent.com/alexanderjeurissen/ranger_devicons/9fb94fb9a1258acaebe0e91d969a45ca4d1899a3/devicons.py"
+
+[".config/rofi/config.rasi"]
+type = "file"
+url = "https://raw.githubusercontent.com/dracula/rofi/459eee340059684bf429a5eb51f8e1cc4998eb74/theme/config1.rasi"
+
+[".fzf/shell/completion.zsh"]
+type = "file"
+url = "https://raw.githubusercontent.com/junegunn/fzf/e4c3ecc57e99f4037199f11b384a7f8758d1a0ff/shell/completion.zsh"
+
+[".fzf/shell/key-bindings.zsh"]
+type = "file"
+url = "https://raw.githubusercontent.com/junegunn/fzf/e4c3ecc57e99f4037199f11b384a7f8758d1a0ff/shell/key-bindings.zsh"
+
+[".gitalias"]
+type = "file"
+url = "https://raw.githubusercontent.com/GitAlias/gitalias/b6980478e27e53baced06154ef86843bbf08b137/gitalias.txt"
+
+[".Xresources"]
+type = "file"
+url = "https://raw.githubusercontent.com/dracula/xresources/539ef24e9b0c5498a82d59bfa2bad9b618d832a3/Xresources"
+
+["bin/i3-long-split"]
+type = "file"
+url = "https://raw.githubusercontent.com/parsiad/i3-new-split-long/44ef05cee09c741cdfc7468b9e8d10f372504bbe/i3_long_split.py"

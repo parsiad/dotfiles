@@ -1,0 +1,6 @@
+#!/bin/sh
+
+chmod +x $HOME/bin/aqi $HOME/bin/i3-long-split
+
+./bin/clone-checkout https://github.com/m4thewz/dracula-icons.git de2a8edd94608ba0ac4dcf5a187af0ffaa511ebc $HOME/.icons/dracula-icons
+./bin/clone-checkout https://github.com/dracula/gtk.git b6eb42625d305d68ac844af9ae66412a5921f178 $HOME/.themes/Dracula

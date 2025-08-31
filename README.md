@@ -1,5 +1,8 @@
-# Parsiad's dotfiles
+# dotfiles
 
-This repo contains my dotfiles.
+This repo contains [my](https://parsiad.ca) dotfiles, managed by [chezmoi](https://chezmoi.io).
 
-It uses [dotbot](https://github.com/anishathalye/dotbot) for bootstrapping.
+```bash
+chezmoi init parsiad
+chezmoi apply
+```

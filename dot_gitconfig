@@ -1,0 +1,16 @@
+[user]
+	name = Parsiad Azimzadeh
+	email = parsiad.azimzadeh@gmail.com
+[core]
+	editor = nvim
+[credential]
+	helper = store
+[diff]
+	tool = nvimdiff
+[include]
+	path = ~/.gitalias
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process

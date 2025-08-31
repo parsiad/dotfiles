@@ -1,0 +1,71 @@
+{
+  "agent_font_size": 14,
+  "agent": {
+    "default_profile": "write",
+    "always_allow_tool_actions": true,
+    "model_parameters": [],
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-latest"
+    }
+  },
+  "buffer_font_family": "SauceCodePro Nerd Font",
+  "buffer_font_size": 12,
+  "buffer_font_weight": 500,
+  "inlay_hints": {
+    "enabled": true,
+    "show_background": true,
+    "show_other_hints": true
+  },
+  "edit_predictions": {
+    "mode": "subtle"
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "format_on_save": "on",
+  "languages": {
+    "Python": {
+      "language_servers": ["basedpyright", "ruff", "!pyright"],
+      "formatter": [
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ],
+      "remove_trailing_whitespace_on_save": false
+    },
+    "C++": {
+      "language_servers": ["clangd"],
+      "remove_trailing_whitespace_on_save": false,
+      "tab_size": 2
+    }
+  },
+  "minimap": {
+    "current_line_highlight": "line",
+    "show": "auto",
+    "thumb": "hover",
+    "thumb_border": "none"
+  },
+  "project_panel": {
+    "hide_gitignore": true
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Dracula Solid"
+  },
+  "relative_line_numbers": true,
+  "show_edit_predictions": true,
+  "show_wrap_guides": true,
+  "soft_wrap": "editor_width",
+  "ui_font_size": 14,
+  "use_autoclose": false,
+  "vim_mode": true,
+  "wrap_guides": [80, 120]
+}
