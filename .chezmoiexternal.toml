@@ -30,6 +30,16 @@ url = "https://raw.githubusercontent.com/junegunn/fzf/e4c3ecc57e99f4037199f11b38
 type = "file"
 url = "https://raw.githubusercontent.com/GitAlias/gitalias/b6980478e27e53baced06154ef86843bbf08b137/gitalias.txt"
 
+[".icons/dracula-icons"]
+clone.args = ["--revision", "de2a8edd94608ba0ac4dcf5a187af0ffaa511ebc"]
+type = "git-repo"
+url = "https://github.com/m4thewz/dracula-icons.git"
+
+[".themes/Dracula"]
+clone.args = ["--revision", "b6eb42625d305d68ac844af9ae66412a5921f178"]
+type = "git-repo"
+url = "https://github.com/dracula/gtk.git"
+
 [".Xresources"]
 type = "file"
 url = "https://raw.githubusercontent.com/dracula/xresources/539ef24e9b0c5498a82d59bfa2bad9b618d832a3/Xresources"

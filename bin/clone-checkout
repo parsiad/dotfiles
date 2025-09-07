@@ -1,8 +1,0 @@
-#!/bin/bash
-set -e
-
-URL="$1"
-SHA="$2"
-DIR="$3"
-
-[ -d "$DIR" ] && exit 0 || { TMPDIR=$(mktemp -d) && git clone "$URL" "$TMPDIR" && cd "$TMPDIR" && git checkout "$SHA" && mv "$TMPDIR" "$DIR"; }
