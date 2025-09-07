@@ -6,7 +6,7 @@ family = "SauceCodePro NF"
 style = "SemiBold"
 
 [font]
-size = {{ if eq .chezmoi.hostname "sagely" }}10{{ else }}12{{ end }}
+size = 10
 
 [general]
 import = ["~/.alacritty.theme.toml"]
