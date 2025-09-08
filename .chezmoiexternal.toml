@@ -6,6 +6,16 @@ url = "https://raw.githubusercontent.com/dracula/alacritty/c8a3a13404b78d520d043
 type = "file"
 url = "https://raw.githubusercontent.com/dracula/dunst/907f345d81dba9566eff59dd89afb321118da180/dunstrc"
 
+[".config/fish/plugins/fzf.fish"]
+stripComponents = 1
+type = "archive"
+url = "https://github.com/PatrickF1/fzf.fish/archive/8920367cf85eee5218cc25a11e209d46e2591e7a.tar.gz"
+
+[".config/fish/plugins/dracula.fish"]
+stripComponents = 1
+type = "archive"
+url = "https://github.com/dracula/fish/archive/269cd7d76d5104fdc2721db7b8848f6224bdf554.tar.gz"
+
 [".config/nvim/init.lua"]
 type = "file"
 url = "https://raw.githubusercontent.com/LazyVim/starter/803bc181d7c0d6d5eeba9274d9be49b287294d99/init.lua"
