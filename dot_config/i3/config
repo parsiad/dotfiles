@@ -142,7 +142,7 @@ bindsym $mod+less focus output left
 bindsym $mod+Shift+greater move container to output right
 bindsym $mod+Shift+less move container to output left
 
-gaps inner 5
+gaps inner 15
 
 smart_gaps on
 
