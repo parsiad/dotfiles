@@ -65,6 +65,7 @@ bindsym $mod+v split v
 bindsym $mod+w kill
 bindsym $mod+x exec $HOME/bin/rdp-init.sh
 bindsym $mod+y sticky toggle
+bindsym $mod+z exec $HOME/.fehbg
 bindsym $mod+space floating toggle
 
 bindsym Print exec "flameshot gui"
@@ -184,3 +185,4 @@ exec_always --no-startup-id $HOME/bin/i3-long-split
 exec_always --no-startup-id i3wsr
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id setxkbmap -option compose:ralt
+exec_always --no-startup-id $HOME/.fehbg
