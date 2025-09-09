@@ -1,6 +1,17 @@
 set -x CRYPTOGRAPHY_OPENSSL_NO_LEGACY 1
 set -x EDITOR nvim
-set -x PATH $PATH /opt/miniconda3/bin $HOME/bin
+set -x PATH $PATH $HOME/bin
+
+# Create Miniconda startup script if it does not exist to reduce shell startup time
+set -l conda_bin /opt/miniconda3/bin
+if test -e $conda_bin
+    set -l conda_hook ~/.config/fish/conf.d/conda.fish
+    set -x PATH $PATH $conda_bin
+    if not test -e $conda_hook # -o $conda_bin/conda -nt $conda_hook
+        $conda_bin/conda shell.fish hook >$conda_hook
+    end
+    source $conda_hook
+end
 
 if not status --is-interactive
     return
