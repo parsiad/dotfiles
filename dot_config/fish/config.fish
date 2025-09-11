@@ -42,17 +42,21 @@ if type -q nvim
     set -x MANPAGER 'nvim +Man!'
 end
 
-alias decrypt-id_rsa 'gpg --decrypt ~/.password-store/keys/id_rsa.gpg | ssh-add -t 60 -'
+alias d 'pass keys/id_rsa | ssh-add -t 600 -'
+alias f sftp
 alias g git
-alias git-authors 'git shortlog --email --summary --numbered'
-alias git-sha 'git rev-parse --short HEAD'
 alias l 'ls -l'
-alias la 'ls -la'
+alias p pacman
+alias s ssh
+alias v vim
+
+alias la 'l -a'
 alias ll l
-alias pacman-age 'head -n1 /var/log/pacman.log | cut -d'\'' '\'' -f1 | cut -c 2-'
-alias pacman-rm-orphans 'sudo pacman -Rns $(pacman -Qtdq)'
+
+alias pac-age 'head -n1 /var/log/pacman.log | cut -d'\'' '\'' -f1 | cut -c 2-'
+alias pac-rmo 'sudo pacman -Rns $(pacman -Qtdq)'
+
 alias services 'systemctl list-unit-files --type=service'
-alias vi vim
 
 function bin2dec
     echo "ibase=2 ;           $argv[1]" | bc -l
