@@ -1,0 +1,61 @@
+{
+    "editor.fontFamily": "SauceCodePro Nerd Font Mono",
+    "editor.fontWeight": "600",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.inlayHints.enabled": "on",
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": true,
+    "editor.minimap.showSlider": "mouseover",
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.wordWrap": "on",
+    "gitlens.codeLens.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.launchpad.indicator.enabled": false,
+    "gitlens.telemetry.enabled": false,
+    "telemetry.feedback.enabled": false,
+    "terminal.integrated.fontFamily": "SauceCodePro Nerd Font Mono",
+    "terminal.integrated.fontWeight": "600",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "]",
+                "d"
+            ],
+            "commands": [
+                "editor.action.marker.next"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "d"
+            ],
+            "commands": [
+                "editor.action.marker.prev"
+            ]
+        },
+        {
+            "before": [
+                "<space>",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.showHover"
+            ]
+        }
+    ],
+    "window.commandCenter": true,
+    "workbench.colorTheme": "Dracula Theme"
+}
