@@ -9,6 +9,8 @@
 	tool = nvimdiff
 [include]
 	path = ~/.gitalias
+[include]
+	path = ~/.gitalias.txt
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f

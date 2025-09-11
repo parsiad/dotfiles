@@ -1,0 +1,3 @@
+[alias]
+    authors = !git shortlog --email --summary --numbered
+    sha = !git rev-parse --short HEAD

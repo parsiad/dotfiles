@@ -36,7 +36,7 @@ url = "https://raw.githubusercontent.com/junegunn/fzf/e4c3ecc57e99f4037199f11b38
 type = "file"
 url = "https://raw.githubusercontent.com/junegunn/fzf/e4c3ecc57e99f4037199f11b384a7f8758d1a0ff/shell/key-bindings.zsh"
 
-[".gitalias"]
+[".gitalias.txt"]
 type = "file"
 url = "https://raw.githubusercontent.com/GitAlias/gitalias/b6980478e27e53baced06154ef86843bbf08b137/gitalias.txt"
 
