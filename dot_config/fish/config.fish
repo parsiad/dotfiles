@@ -53,3 +53,33 @@ alias pacman-age 'head -n1 /var/log/pacman.log | cut -d'\'' '\'' -f1 | cut -c 2-
 alias pacman-rm-orphans 'sudo pacman -Rns $(pacman -Qtdq)'
 alias services 'systemctl list-unit-files --type=service'
 alias vi vim
+
+function bin2dec
+    echo "ibase=2 ;           $argv[1]" | bc -l
+end
+function bin2hex
+    echo "ibase=2 ; obase=16; $argv[1]" | bc -l
+end
+function dec2bin
+    echo "          obase=2 ; $argv[1]" | bc -l
+end
+function dec2hex
+    echo "          obase=16; $argv[1]" | bc -l
+end
+function hex2bin
+    echo "ibase=16; obase=2 ; $argv[1]" | bc -l
+end
+function hex2dec
+    echo "ibase=16;           $argv[1]" | bc -l
+end
+
+function json-diff
+    diff (jq -S . $argv[1] | psub) (jq -S . $argv[2] | psub)
+end
+
+function md5sum-dir
+    find $argv[1] -type f -exec md5sum {} \; | sort -k 2 | md5sum
+end
+function sha256sum-dir
+    find $argv[1] -type f -exec sha256sum {} \; | sort -k 2 | sha256sum
+end
