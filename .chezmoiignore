@@ -1,1 +1,5 @@
 *.md
+{{ if ne .chezmoi.os "linux" }}
+bin/aqi.tmpl
+dot_config/gtk-3.0/encrypted_bookmarks.asc
+{{ end }}
