@@ -34,8 +34,8 @@ end
 if type -q colordiff
     alias diff colordiff
 end
-if type -q exa
-    alias ls='exa -H -g' || alias ls='ls --color=auto'
+if type -q eza
+    alias ls='eza -H -g' || alias ls='ls --color=auto'
 end
 if type -q nvim
     alias vim=nvim
