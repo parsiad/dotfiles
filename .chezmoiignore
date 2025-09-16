@@ -3,3 +3,6 @@
 bin/aqi
 .config/gtk-3.0/bookmarks
 {{ end }}
+{{ if ne .chezmoi.os "darwin" }}
+Library
+{{ end }}
