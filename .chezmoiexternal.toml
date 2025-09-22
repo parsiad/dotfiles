@@ -59,5 +59,6 @@ type = "file"
 url = "https://raw.githubusercontent.com/dracula/xresources/539ef24e9b0c5498a82d59bfa2bad9b618d832a3/Xresources"
 
 ["bin/i3-long-split"]
+executable = true
 type = "file"
 url = "https://raw.githubusercontent.com/parsiad/i3-new-split-long/44ef05cee09c741cdfc7468b9e8d10f372504bbe/i3_long_split.py"

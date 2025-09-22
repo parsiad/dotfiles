@@ -1,7 +1,5 @@
 #!/bin/bash
 
-chmod +x $HOME/bin/*
-
 # Symlink fish plugins
 # TODO: Improve
 for type in completions conf.d functions themes; do
