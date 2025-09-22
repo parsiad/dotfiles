@@ -17,6 +17,7 @@
     "gitlens.launchpad.indicator.enabled": false,
     "gitlens.telemetry.enabled": false,
     "telemetry.feedback.enabled": false,
+    "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.fontFamily": "SauceCodePro Nerd Font Mono",
     "terminal.integrated.fontWeight": "600",
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -56,6 +57,7 @@
             ]
         }
     ],
+    "vim.useSystemClipboard": true,
     "window.commandCenter": true,
     "workbench.colorTheme": "Dracula Theme"
 }

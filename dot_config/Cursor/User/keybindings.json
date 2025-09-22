@@ -1,17 +1,47 @@
 [
     {
-        "command": "workbench.action.terminal.clear",
-        "key": "ctrl+l",
-        "when": "terminalFocus"
+        "command": "editor.action.acceptCursorTabSuggestion",
+        "key": "alt+l",
+        "when": "cpp.shouldAcceptTab"
     },
     {
-        "key": "ctrl+b",
+        "command": "-editor.action.acceptCursorTabSuggestion",
+        "key": "tab",
+        "when": "cpp.shouldAcceptTab"
+    },
+    {
         "command": "-extension.vim_ctrl+b",
+        "key": "ctrl+b",
         "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
     },
     {
-        "key": "ctrl+p",
         "command": "-extension.vim_ctrl+p",
+        "key": "ctrl+p",
         "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+    },
+    {
+        "key": "shift+o",
+        "command": "notebook.cell.insertCodeCellAboveAndFocusContainer",
+        "when": "notebookEditorFocused && !inputFocus && !notebookOutputFocused"
+    },
+    {
+        "key": "a",
+        "command": "-notebook.cell.insertCodeCellAboveAndFocusContainer",
+        "when": "notebookEditorFocused && !inputFocus && !notebookOutputFocused"
+    },
+    {
+        "key": "o",
+        "command": "notebook.cell.insertCodeCellBelowAndFocusContainer",
+        "when": "notebookEditorFocused && !inputFocus && !notebookOutputFocused"
+    },
+    {
+        "key": "b",
+        "command": "-notebook.cell.insertCodeCellBelowAndFocusContainer",
+        "when": "notebookEditorFocused && !inputFocus && !notebookOutputFocused"
+    },
+    {
+        "command": "workbench.action.terminal.clear",
+        "key": "ctrl+l",
+        "when": "terminalFocus"
     }
 ]
