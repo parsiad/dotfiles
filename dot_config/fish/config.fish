@@ -8,6 +8,7 @@ if test -e $conda_bin
     set -l conda_hook ~/.config/fish/conf.d/conda.fish
     set -x PATH $PATH $conda_bin
     if not test -e $conda_hook # -o $conda_bin/conda -nt $conda_hook
+        $conda_bin/conda config --set auto_activate_base false
         $conda_bin/conda shell.fish hook >$conda_hook
     end
     source $conda_hook
