@@ -60,6 +60,8 @@ alias ll l
 alias pac-age 'head -n1 /var/log/pacman.log | cut -d'\'' '\'' -f1 | cut -c 2-'
 alias pac-rmo 'sudo pacman -Rns $(pacman -Qtdq)'
 
+alias pydbg 'python -m ipdb'
+
 alias services 'systemctl list-unit-files --type=service'
 
 function bin2dec
