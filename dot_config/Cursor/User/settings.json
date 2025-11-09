@@ -13,6 +13,7 @@
         120
     ],
     "editor.wordWrap": "on",
+    "files.participants.timeout": 0, // Setting this to zero means renames do not affect other files in big repos
     "git.blame.editorDecoration.enabled": false,
     "git.openRepositoryInParentFolders": "never",
     "gitlens.codeLens.enabled": false,
