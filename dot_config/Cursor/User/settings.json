@@ -25,6 +25,7 @@
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.fontFamily": "SauceCodePro Nerd Font Mono",
     "terminal.integrated.fontWeight": "600",
+    "terminal.integrated.showLinkHover": false,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
