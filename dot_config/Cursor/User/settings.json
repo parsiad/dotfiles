@@ -1,4 +1,5 @@
 {
+    "cursor.preferNotificationsSameAsChat": true,
     "editor.fontFamily": "SauceCodePro Nerd Font Mono",
     "editor.fontWeight": "600",
     "editor.formatOnSave": true,
