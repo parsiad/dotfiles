@@ -87,6 +87,21 @@ function json-diff
     diff (jq -S . $argv[1] | psub) (jq -S . $argv[2] | psub)
 end
 
+function pac-sze
+    pacman -Qi | awk '
+    /^Name[[:space:]]*:/ {line=$0; sub(/.*: */,"",line); name=line}
+    /^Installed Size[[:space:]]*:/ {
+      line=$0; sub(/.*: */,"",line); split(line,a," ");
+      size=a[1]; unit=a[2];
+      if(unit=="KiB") bytes=size*1024;
+      else if(unit=="MiB") bytes=size*1024*1024;
+      else if(unit=="GiB") bytes=size*1024*1024*1024;
+      else bytes=size;
+      printf "%020d %s %s %s\n", bytes, size, unit, name
+    }
+    ' | sort -nr | awk '{print $2" "$3" "$4}'
+end
+
 function md5sum-dir
     find $argv[1] -type f -exec md5sum {} \; | sort -k 2 | md5sum
 end
