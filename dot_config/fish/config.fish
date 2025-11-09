@@ -2,6 +2,11 @@ set -x CRYPTOGRAPHY_OPENSSL_NO_LEGACY 1
 set -x EDITOR nvim
 set -x PATH $PATH $HOME/bin
 
+# Some display managers do not set SSH_AUTH_SOCK
+if set -q XDG_RUNTIME_DIR; and not set -q SSH_AUTH_SOCK
+    set -x SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
+end
+
 # Create Miniconda startup script if it does not exist to reduce shell startup time
 set -l conda_bin /opt/miniconda3/bin
 if test -e $conda_bin
