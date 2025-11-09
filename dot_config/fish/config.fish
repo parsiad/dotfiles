@@ -27,6 +27,7 @@ eval (direnv hook fish | source)
 eval (zoxide init fish | source)
 
 fish_vi_key_bindings
+bind ctrl-e edit_command_buffer
 
 if type -q batcat
     alias bat batcat
