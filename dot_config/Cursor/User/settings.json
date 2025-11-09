@@ -12,6 +12,8 @@
         120
     ],
     "editor.wordWrap": "on",
+    "git.blame.editorDecoration.enabled": false,
+    "git.openRepositoryInParentFolders": "never",
     "gitlens.codeLens.enabled": false,
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.launchpad.indicator.enabled": false,
