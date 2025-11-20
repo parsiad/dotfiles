@@ -41,7 +41,7 @@ bindsym $alt+Control+e exec xdotool mouseup 1
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+space focus mode_toggle
 bindsym $mod+Tab workspace back_and_forth
-bindsym $mod+a mode "resize"
+bindsym $mod+a exec $HOME/bin/flicker
 bindsym $mod+b exec rofi -show window -font "SauceCodePro NF 14"
 bindsym $mod+c focus child
 bindsym $mod+d exec rofi -show drun -font "SauceCodePro NF 14"
@@ -56,7 +56,7 @@ bindsym $mod+m exec pcmanfm
 bindsym $mod+n exec "i3-msg rename workspace to \\\\"$(zenity --entry --entry-text $(i3-msg -t get_workspaces | jq '.[] | select(.focused == true)' | jq .num):' ')\\\\""
 bindsym $mod+o exec "i3-msg move workspace to output next"
 bindsym $mod+p focus parent
-bindsym $mod+q mode "exit: [l]ogout, [r]eboot, [s]hutdown"
+bindsym $mod+q exec i3-msg exit
 bindsym $mod+r restart
 bindsym $mod+s layout toggle split
 bindsym $mod+t layout tabbed
@@ -103,21 +103,6 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
-
-mode "resize" {
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-        bindsym Escape mode "default"
-}
-
-mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
-        bindsym l exec i3-msg exit
-        bindsym r exec sudo reboot
-        bindsym s exec sudo shutdown -h now
-        bindsym Escape mode "default"
-}
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
