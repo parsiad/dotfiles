@@ -1,0 +1,48 @@
+#!/bin/bash
+: '
+flicker.sh
+
+This script toggles the resolution of the first connected display using xrandr.
+It explicitly detects the preferred/native mode (marked with +) and the first
+other available mode listed under the output. On each run, it switches between
+the preferred mode and the alternate mode.
+
+Usage:
+    ./flicker.sh            # Perform the toggle
+    ./flicker.sh --dry-run  # Print the xrandr command without executing
+'
+
+DRY=0
+[ "$1" = "--dry-run" ] && DRY=1
+
+# Detect connected output
+OUT=$(xrandr | awk '/ connected/ {print $1; exit}')
+
+# Detect preferred mode (marked with +)
+PREF=$(xrandr | awk -v o="$OUT" '
+  $1==o{f=1; next}
+  f && /^\s+[0-9]+x[0-9]+/ && /\+/ {gsub(/\*|\+/,""); print $1; exit}
+')
+
+# Pick the first other mode (skip the preferred one)
+ALT=$(xrandr | awk -v o="$OUT" -v pref="$PREF" '
+  $1==o{f=1; next}
+  f && /^\s+[0-9]+x[0-9]+/ {gsub(/\*|\+/,""); if($1 != pref){print $1; exit}}
+')
+
+# Detect current mode
+CUR=$(xrandr | awk -v o="$OUT" '
+  $1==o{f=1; next}
+  f && /^\s+[0-9]+x[0-9]+/ && /\*/ {gsub(/\*|\+/,""); print $1; exit}
+')
+
+# Toggle
+if [ "$CUR" = "$PREF" ]; then
+  TARGET="$ALT"
+else
+  TARGET="$PREF"
+fi
+
+CMD="xrandr --output $OUT --mode $TARGET"
+echo "$CMD"
+[ $DRY -eq 0 ] && eval "$CMD"
