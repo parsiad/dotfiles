@@ -24,4 +24,9 @@ if res["status"] == "error":
     print(-1)
     sys.exit(1)
 
-print(res["data"]["aqi"])
+aqi_str = res["data"]["aqi"]
+try:
+    aqi = int(aqi_str)
+    print(aqi)
+except ValueError:
+    print("?")
