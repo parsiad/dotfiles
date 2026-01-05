@@ -16,17 +16,17 @@ location = urllib.parse.quote(args.location)
 
 url = _URL.format(location=location)
 
-res = urllib.request.urlopen(url, timeout=1)
-res = res.read()
-res = json.loads(res)
-
-if res["status"] == "error":
-    print(-1)
-    sys.exit(1)
-
-aqi_str = res["data"]["aqi"]
 try:
-    aqi = int(aqi_str)
-    print(aqi)
-except ValueError:
+  res = urllib.request.urlopen(url, timeout=1)
+  res = res.read()
+  res = json.loads(res)
+
+  if res["status"] == "error":
+      print("?")
+      sys.exit(1)
+
+  aqi_str = res["data"]["aqi"]
+  aqi = int(aqi_str)
+  print(aqi)
+except Exception:
     print("?")
