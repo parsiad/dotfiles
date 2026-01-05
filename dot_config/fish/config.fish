@@ -54,6 +54,9 @@ alias p pacman
 alias s ssh
 alias v vim
 
+alias enc 'gpg -r E97D1AB234818A28 --encrypt'
+alias dec 'gpg --decrypt'
+
 alias la 'l -a'
 alias ll l
 
