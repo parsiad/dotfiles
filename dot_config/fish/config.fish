@@ -111,3 +111,23 @@ end
 function sha256sum-dir
     find $argv[1] -type f -exec sha256sum {} \; | sort -k 2 | sha256sum
 end
+
+function enc-gz
+    if test (count $argv) -lt 1
+        echo "Usage: enc-gz INPUT [OUTPUT]"
+        return 1
+    end
+    set src $argv[1]
+    set dest (if test (count $argv) -eq 2; echo $argv[2]; else; echo "$src.tar.gz.gpg"; end)
+    tar -czf - $src | gpg -r E97D1AB234818A28 --encrypt >$dest
+end
+function dec-gz
+    if test (count $argv) -lt 1
+        echo "Usage: dec-gz INPUT [OUTPUT]"
+        return 1
+    end
+    set file $argv[1]
+    set outdir (if test (count $argv) -eq 2; echo $argv[2]; else; echo .; end)
+    mkdir -p $outdir
+    gpg --decrypt $file | tar -xzf - -C $outdir
+end
